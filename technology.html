@@ -175,15 +175,28 @@
   </footer>
 
   <script>
-    let currentLang="zh";
-    function toggleLang(){
-      currentLang=currentLang==="zh"?"en":"zh";
-      document.documentElement.lang=currentLang==="zh"?"zh-Hant":"en";
-      document.querySelectorAll("[data-zh]").forEach(el=>{
-        el.textContent=el.getAttribute(`data-${currentLang}`);
+    let currentLang = localStorage.getItem("siteLang") || "zh";
+
+    function applyLang() {
+      document.documentElement.lang = currentLang === "zh" ? "zh-Hant" : "en";
+
+      document.querySelectorAll("[data-zh]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
       });
-      document.getElementById("langBtn").textContent=currentLang==="zh"?"English":"繁體中文";
+
+      const langBtn = document.getElementById("langBtn");
+      if (langBtn) {
+        langBtn.textContent = currentLang === "zh" ? "English" : "繁體中文";
+      }
     }
+
+    function toggleLang() {
+      currentLang = currentLang === "zh" ? "en" : "zh";
+      localStorage.setItem("siteLang", currentLang);
+      applyLang();
+    }
+
+    applyLang();
   </script>
 </body>
 </html>
