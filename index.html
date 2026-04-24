@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,8 +22,17 @@
     }
 
     .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
       font-weight: 700;
       font-size: 22px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: auto;
+      display: block;
     }
 
     .brand span {
@@ -34,19 +43,14 @@
       margin-top: 4px;
     }
 
-    .nav-contact {
-      text-align: right;
-    }
-
-    .email {
-      font-size: 12px;
-      color: #64748b;
-      margin-top: 8px;
-    }
-
-    .email a {
-      color: #64748b;
-      text-decoration: none;
+    .lang-toggle {
+      border: 1px solid #d7e0ea;
+      background: white;
+      color: #0A2540;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
     }
 
     .btn {
@@ -55,7 +59,7 @@
       padding: 12px 22px;
       border-radius: 6px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       display: inline-block;
     }
 
@@ -63,13 +67,20 @@
       background: #0A2540;
     }
 
+    .btn-outline {
+      background: white;
+      color: #0A2540;
+      border: 1px solid #0A2540;
+      margin-left: 12px;
+    }
+
     .hero {
       max-width: 1180px;
       margin: auto;
-      padding: 80px 24px 100px;
+      padding: 90px 24px 110px;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
+      gap: 70px;
       align-items: center;
     }
 
@@ -90,34 +101,51 @@
     .hero p {
       font-size: 20px;
       color: #475569;
-      line-height: 1.7;
-      max-width: 640px;
+      line-height: 1.75;
+      max-width: 660px;
     }
 
-    .logo-card {
-      background: #f6f9fc;
+    .visual {
+      position: relative;
+      height: 420px;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 70% 30%, rgba(46,196,182,0.18), transparent 34%),
+        linear-gradient(135deg, rgba(10,37,64,0.05), rgba(46,196,182,0.08));
+      overflow: hidden;
       border: 1px solid #e2e8f0;
-      border-radius: 28px;
-      padding: 48px;
-      text-align: center;
     }
 
-    .logo-card img {
-      width: 280px;
-      max-width: 100%;
-      display: block;
-      margin: 0 auto 26px;
+    .visual::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      border: 1px solid rgba(10,37,64,0.08);
+      top: -120px;
+      right: -160px;
     }
 
-    .logo-card h3 {
-      margin: 0;
-      font-size: 22px;
+    .visual::after {
+      content: "";
+      position: absolute;
+      width: 460px;
+      height: 180px;
+      background: linear-gradient(135deg, rgba(10,37,64,0.10), rgba(46,196,182,0.18));
+      bottom: 55px;
+      right: -40px;
+      transform: skewY(-10deg);
+      border-radius: 40px;
     }
 
-    .logo-card p {
-      color: #64748b;
-      margin-bottom: 0;
-      line-height: 1.6;
+    .visual img {
+      position: absolute;
+      width: 150px;
+      opacity: 0.18;
+      right: 42px;
+      bottom: 38px;
+      z-index: 2;
     }
 
     .section {
@@ -136,6 +164,10 @@
     h2 {
       font-size: 40px;
       margin: 12px 0 36px;
+    }
+
+    .center {
+      text-align: center;
     }
 
     .grid {
@@ -186,7 +218,7 @@
     }
 
     .cta-email {
-      margin-top: 14px;
+      margin-top: 18px;
       color: #cbd5e1;
       font-size: 16px;
     }
@@ -194,7 +226,7 @@
     .cta-email a {
       color: #ffffff;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     footer {
@@ -219,6 +251,10 @@
         gap: 20px;
       }
 
+      .brand img {
+        width: 44px;
+      }
+
       .hero, .grid, .points {
         grid-template-columns: 1fr;
       }
@@ -231,8 +267,13 @@
         padding-top: 50px;
       }
 
-      .logo-card {
-        padding: 32px;
+      .visual {
+        height: 280px;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+        margin-top: 12px;
       }
 
       footer {
@@ -245,65 +286,69 @@
 <body>
   <nav class="nav">
     <div class="brand">
-      遠嶠科技有限公司
-      <span>PROMONTORY TECHNOLOGY LIMITED</span>
-    </div>
-
-    <div class="nav-contact">
-      <a class="btn" href="mailto:info@yuanqiao.io">Contact Us</a>
-      <div class="email">
-        <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
+      <img src="Logo.png" alt="Promontory Technology Limited Logo" />
+      <div>
+        遠嶠科技有限公司
+        <span>PROMONTORY TECHNOLOGY LIMITED</span>
       </div>
     </div>
+
+    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">English</button>
   </nav>
 
   <section class="hero">
     <div>
       <div class="label">Consulting · Content · Technology</div>
-      <h1>Technology-driven consulting for professional service delivery.</h1>
-      <p>
-        Promontory Technology Limited provides structured consulting, professional
-        content development, and technology-enabled workflow support for organizations
-        seeking reliable, scalable, and high-quality execution.
+      <h1 data-zh="以科技與專業，助力組織穩健成長。" data-en="Technology-driven consulting for professional service delivery.">
+        以科技與專業，助力組織穩健成長。
+      </h1>
+      <p data-zh="遠嶠科技有限公司提供結構化諮詢、專業內容開發及科技驅動的流程支援，協助組織建立可靠、可擴展且高品質的服務能力。"
+         data-en="Promontory Technology Limited provides structured consulting, professional content development, and technology-enabled workflow support for organizations seeking reliable, scalable, and high-quality execution.">
+        遠嶠科技有限公司提供結構化諮詢、專業內容開發及科技驅動的流程支援，協助組織建立可靠、可擴展且高品質的服務能力。
       </p>
       <br />
-      <a class="btn btn-dark" href="mailto:info@yuanqiao.io">Start a Conversation</a>
+      <a class="btn btn-dark" href="mailto:info@yuanqiao.io"
+         data-zh="開始合作" data-en="Start a Conversation">開始合作</a>
+      <a class="btn btn-outline" href="#services"
+         data-zh="了解服務" data-en="View Services">了解服務</a>
     </div>
 
-    <div class="logo-card">
+    <div class="visual">
       <img src="Logo.png" alt="Promontory Technology Limited Logo" />
-      <h3>Promontory Technology Limited</h3>
-      <p>Structured · Reliable · Technology-enabled</p>
     </div>
   </section>
 
-  <section class="section gray">
+  <section id="services" class="section gray">
     <div class="inner">
-      <div class="label">Services</div>
-      <h2>Practical support for organizations building scalable operations.</h2>
+      <div class="center">
+        <div class="label" data-zh="我們的服務" data-en="Our Services">我們的服務</div>
+        <h2 data-zh="為專業團隊提供穩定、可擴展的支持。" data-en="Practical support for organizations building scalable operations.">
+          為專業團隊提供穩定、可擴展的支持。
+        </h2>
+      </div>
 
       <div class="grid">
         <div class="card">
-          <h3>Consulting & Strategy</h3>
-          <p>
-            Structured advisory support for organizations that require clear planning,
-            scalable delivery models, and reliable execution.
+          <h3 data-zh="諮詢與策略" data-en="Consulting & Strategy">諮詢與策略</h3>
+          <p data-zh="為組織提供結構化的規劃與諮詢服務，協助梳理方向、優化流程並提升執行效率。"
+             data-en="Structured advisory support for organizations that require clear planning, scalable delivery models, and reliable execution.">
+            為組織提供結構化的規劃與諮詢服務，協助梳理方向、優化流程並提升執行效率。
           </p>
         </div>
 
         <div class="card">
-          <h3>Content & Documentation</h3>
-          <p>
-            Professional writing, editing, documentation, and communication support
-            across education, business, and technology-facing contexts.
+          <h3 data-zh="內容與文件開發" data-en="Content & Documentation">內容與文件開發</h3>
+          <p data-zh="提供專業寫作、編輯、文件整理及溝通材料支持，適用於教育、商業及科技相關場景。"
+             data-en="Professional writing, editing, documentation, and communication support across education, business, and technology-facing contexts.">
+            提供專業寫作、編輯、文件整理及溝通材料支持，適用於教育、商業及科技相關場景。
           </p>
         </div>
 
         <div class="card">
-          <h3>Technology-enabled Services</h3>
-          <p>
-            Workflow-oriented service design and operational support that integrate
-            technology into professional service delivery.
+          <h3 data-zh="科技驅動服務" data-en="Technology-enabled Services">科技驅動服務</h3>
+          <p data-zh="結合流程設計與技術工具，協助專業服務團隊提升交付效率、標準化程度與可擴展性。"
+             data-en="Workflow-oriented service design and operational support that integrate technology into professional service delivery.">
+            結合流程設計與技術工具，協助專業服務團隊提升交付效率、標準化程度與可擴展性。
           </p>
         </div>
       </div>
@@ -313,31 +358,34 @@
   <section class="section">
     <div class="inner points">
       <div>
-        <div class="label">Why Promontory</div>
-        <h2>A long-term partner for professional service teams.</h2>
+        <div class="label" data-zh="為何選擇遠嶠" data-en="Why Promontory">為何選擇遠嶠</div>
+        <h2 data-zh="長期、可靠、靈活的專業服務夥伴。" data-en="A long-term partner for professional service teams.">
+          長期、可靠、靈活的專業服務夥伴。
+        </h2>
       </div>
 
       <div>
         <div class="point">
-          <h3>Reliable delivery</h3>
-          <p>
-            Clear workflows, stable turnaround, and consistent quality control across projects.
+          <h3 data-zh="可靠交付" data-en="Reliable delivery">可靠交付</h3>
+          <p data-zh="清晰流程、穩定週期與一致的品質控制，適合長期合作。"
+             data-en="Clear workflows, stable turnaround, and consistent quality control across projects.">
+            清晰流程、穩定週期與一致的品質控制，適合長期合作。
           </p>
         </div>
 
         <div class="point">
-          <h3>Global perspective</h3>
-          <p>
-            Experience across international education, professional communication,
-            and cross-border service environments.
+          <h3 data-zh="全球視野" data-en="Global perspective">全球視野</h3>
+          <p data-zh="理解跨文化、跨市場與跨境服務場景中的專業溝通需求。"
+             data-en="Experience across international education, professional communication, and cross-border service environments.">
+            理解跨文化、跨市場與跨境服務場景中的專業溝通需求。
           </p>
         </div>
 
         <div class="point">
-          <h3>Flexible cooperation</h3>
-          <p>
-            Support for project-based work, long-term cooperation, and customized
-            service models for partner organizations.
+          <h3 data-zh="彈性合作" data-en="Flexible cooperation">彈性合作</h3>
+          <p data-zh="支持項目制、長期合作及按需求定制的服務模式。"
+             data-en="Support for project-based work, long-term cooperation, and customized service models for partner organizations.">
+            支持項目制、長期合作及按需求定制的服務模式。
           </p>
         </div>
       </div>
@@ -346,11 +394,15 @@
 
   <section class="section cta">
     <div class="inner">
-      <h2>Looking for a reliable consulting and service partner?</h2>
-      <p>
-        Contact us to discuss cooperation models, service scope, and delivery needs.
+      <h2 data-zh="尋找可靠的諮詢與服務合作夥伴？" data-en="Looking for a reliable consulting and service partner?">
+        尋找可靠的諮詢與服務合作夥伴？
+      </h2>
+      <p data-zh="歡迎聯繫我們，了解合作模式、服務範圍與交付需求。"
+         data-en="Contact us to discuss cooperation models, service scope, and delivery needs.">
+        歡迎聯繫我們，了解合作模式、服務範圍與交付需求。
       </p>
-      <a class="btn" href="mailto:info@yuanqiao.io">Contact Us</a>
+      <a class="btn" href="mailto:info@yuanqiao.io"
+         data-zh="聯繫我們" data-en="Contact Us">聯繫我們</a>
       <div class="cta-email">
         Email: <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
       </div>
@@ -365,5 +417,21 @@
     </div>
     <div>© 2026 Promontory Technology Limited. All rights reserved.</div>
   </footer>
+
+  <script>
+    let currentLang = "zh";
+
+    function toggleLang() {
+      currentLang = currentLang === "zh" ? "en" : "zh";
+      document.documentElement.lang = currentLang === "zh" ? "zh-Hant" : "en";
+
+      document.querySelectorAll("[data-zh]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+
+      document.getElementById("langBtn").textContent =
+        currentLang === "zh" ? "English" : "繁體中文";
+    }
+  </script>
 </body>
 </html>
