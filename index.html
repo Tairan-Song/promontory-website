@@ -34,6 +34,21 @@
       margin-top: 4px;
     }
 
+    .nav-contact {
+      text-align: right;
+    }
+
+    .email {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 8px;
+    }
+
+    .email a {
+      color: #64748b;
+      text-decoration: none;
+    }
+
     .btn {
       background: #2EC4B6;
       color: white;
@@ -41,6 +56,11 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
+      display: inline-block;
+    }
+
+    .btn-dark {
+      background: #0A2540;
     }
 
     .hero {
@@ -58,10 +78,11 @@
       font-size: 13px;
       letter-spacing: 4px;
       font-weight: 700;
+      text-transform: uppercase;
     }
 
     h1 {
-      font-size: 58px;
+      font-size: 56px;
       line-height: 1.08;
       margin: 18px 0;
     }
@@ -70,29 +91,33 @@
       font-size: 20px;
       color: #475569;
       line-height: 1.7;
-      max-width: 620px;
+      max-width: 640px;
     }
 
     .logo-card {
       background: #f6f9fc;
       border: 1px solid #e2e8f0;
       border-radius: 28px;
-      padding: 50px;
+      padding: 48px;
       text-align: center;
     }
 
-    .circle {
-      width: 220px;
-      height: 220px;
-      background: #0A2540;
-      border-radius: 50%;
-      margin: auto;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 54px;
-      font-weight: 700;
+    .logo-card img {
+      width: 280px;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto 26px;
+    }
+
+    .logo-card h3 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .logo-card p {
+      color: #64748b;
+      margin-bottom: 0;
+      line-height: 1.6;
     }
 
     .section {
@@ -145,6 +170,7 @@
     .point {
       border-left: 4px solid #2EC4B6;
       padding-left: 20px;
+      margin-bottom: 28px;
     }
 
     .cta {
@@ -156,6 +182,19 @@
     .cta p {
       color: #cbd5e1;
       font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .cta-email {
+      margin-top: 14px;
+      color: #cbd5e1;
+      font-size: 16px;
+    }
+
+    .cta-email a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     footer {
@@ -165,27 +204,39 @@
       color: #64748b;
       display: flex;
       justify-content: space-between;
+      gap: 24px;
       font-size: 14px;
     }
 
+    footer a {
+      color: #64748b;
+      text-decoration: none;
+    }
+
     @media (max-width: 800px) {
+      .nav {
+        align-items: flex-start;
+        gap: 20px;
+      }
+
       .hero, .grid, .points {
         grid-template-columns: 1fr;
       }
 
       h1 {
-        font-size: 42px;
+        font-size: 40px;
       }
 
-      .circle {
-        width: 180px;
-        height: 180px;
-        font-size: 42px;
+      .hero {
+        padding-top: 50px;
+      }
+
+      .logo-card {
+        padding: 32px;
       }
 
       footer {
         flex-direction: column;
-        gap: 12px;
       }
     }
   </style>
@@ -197,47 +248,63 @@
       遠嶠科技有限公司
       <span>PROMONTORY TECHNOLOGY LIMITED</span>
     </div>
-    <a class="btn" href="mailto:info@yuanqiao.com">Contact Us</a>
+
+    <div class="nav-contact">
+      <a class="btn" href="mailto:info@yuanqiao.io">Contact Us</a>
+      <div class="email">
+        <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
+      </div>
+    </div>
   </nav>
 
   <section class="hero">
     <div>
-      <div class="label">TO B APPLICATION SUPPORT</div>
-      <h1>Reliable application support for study abroad agencies.</h1>
+      <div class="label">Consulting · Content · Technology</div>
+      <h1>Technology-driven consulting for professional service delivery.</h1>
       <p>
-        We provide professional essay writing, application consulting, and
-        white-label support services for education agencies serving global applicants.
+        Promontory Technology Limited provides structured consulting, professional
+        content development, and technology-enabled workflow support for organizations
+        seeking reliable, scalable, and high-quality execution.
       </p>
       <br />
-      <a class="btn" href="mailto:info@promontorytechnology.com">Start Partnership</a>
+      <a class="btn btn-dark" href="mailto:info@yuanqiao.io">Start a Conversation</a>
     </div>
 
     <div class="logo-card">
-      <div class="circle">遠嶠</div>
+      <img src="Logo.png" alt="Promontory Technology Limited Logo" />
       <h3>Promontory Technology Limited</h3>
-      <p>Professional · Reliable · Confidential</p>
+      <p>Structured · Reliable · Technology-enabled</p>
     </div>
   </section>
 
   <section class="section gray">
     <div class="inner">
-      <div class="label">SERVICES</div>
-      <h2>Built for agencies that need stable delivery.</h2>
+      <div class="label">Services</div>
+      <h2>Practical support for organizations building scalable operations.</h2>
 
       <div class="grid">
         <div class="card">
-          <h3>Essay & Document Writing</h3>
-          <p>Personal statements, statements of purpose, essays, CVs, recommendation drafts, and application materials.</p>
+          <h3>Consulting & Strategy</h3>
+          <p>
+            Structured advisory support for organizations that require clear planning,
+            scalable delivery models, and reliable execution.
+          </p>
         </div>
 
         <div class="card">
-          <h3>Application Consulting</h3>
-          <p>School selection, application strategy, profile positioning, and application timeline support.</p>
+          <h3>Content & Documentation</h3>
+          <p>
+            Professional writing, editing, documentation, and communication support
+            across education, business, and technology-facing contexts.
+          </p>
         </div>
 
         <div class="card">
-          <h3>White-label Partnership</h3>
-          <p>Confidential back-end support for agencies, allowing partners to serve clients under their own brand.</p>
+          <h3>Technology-enabled Services</h3>
+          <p>
+            Workflow-oriented service design and operational support that integrate
+            technology into professional service delivery.
+          </p>
         </div>
       </div>
     </div>
@@ -246,24 +313,32 @@
   <section class="section">
     <div class="inner points">
       <div>
-        <div class="label">WHY US</div>
-        <h2>A practical partner for long-term agency growth.</h2>
+        <div class="label">Why Promontory</div>
+        <h2>A long-term partner for professional service teams.</h2>
       </div>
 
       <div>
         <div class="point">
           <h3>Reliable delivery</h3>
-          <p>Clear workflow, stable turnaround, and consistent writing quality.</p>
+          <p>
+            Clear workflows, stable turnaround, and consistent quality control across projects.
+          </p>
         </div>
 
         <div class="point">
-          <h3>Global academic perspective</h3>
-          <p>Experience across US, UK, and international graduate application systems.</p>
+          <h3>Global perspective</h3>
+          <p>
+            Experience across international education, professional communication,
+            and cross-border service environments.
+          </p>
         </div>
 
         <div class="point">
           <h3>Flexible cooperation</h3>
-          <p>Support for per-order projects, package-based cooperation, and long-term agency partnership.</p>
+          <p>
+            Support for project-based work, long-term cooperation, and customized
+            service models for partner organizations.
+          </p>
         </div>
       </div>
     </div>
@@ -271,17 +346,22 @@
 
   <section class="section cta">
     <div class="inner">
-      <h2>Looking for a reliable application support partner?</h2>
-      <p>Contact us to discuss cooperation models, pricing, and service scope.</p>
-      <br />
-      <a class="btn" href="mailto:info@promontorytechnology.com">Contact Us</a>
+      <h2>Looking for a reliable consulting and service partner?</h2>
+      <p>
+        Contact us to discuss cooperation models, service scope, and delivery needs.
+      </p>
+      <a class="btn" href="mailto:info@yuanqiao.io">Contact Us</a>
+      <div class="cta-email">
+        Email: <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
+      </div>
     </div>
   </section>
 
   <footer>
     <div>
       <strong>遠嶠科技有限公司</strong><br />
-      Promontory Technology Limited
+      Promontory Technology Limited<br />
+      <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
     </div>
     <div>© 2026 Promontory Technology Limited. All rights reserved.</div>
   </footer>
