@@ -7,7 +7,7 @@
   <style>
     body{margin:0;font-family:Arial,"Noto Sans TC",sans-serif;color:#0A2540;background:#fff}
     .nav{max-width:1180px;margin:auto;padding:28px 24px;display:flex;justify-content:space-between;align-items:center}
-    .brand{display:flex;align-items:center;gap:16px;font-weight:700;font-size:24px}
+    .brand{display:flex;align-items:center;gap:16px;font-weight:700;font-size:24px;text-decoration: none;color: inherit;}
     .brand img{width:82px}
     .brand span{display:block;font-size:11px;letter-spacing:3px;color:#64748b;margin-top:4px}
     .nav-links{display:flex;gap:22px;align-items:center}
@@ -38,10 +38,13 @@
 
 <body>
   <nav class="nav">
-    <div class="brand">
+    <a href="index.html" class="brand">
       <img src="Logo.png" alt="Promontory Technology Limited Logo" />
-      <div>遠嶠科技有限公司<span>PROMONTORY TECHNOLOGY LIMITED</span></div>
-    </div>
+      <div>
+        遠嶠科技有限公司
+        <span>PROMONTORY TECHNOLOGY LIMITED</span>
+      </div>
+    </a>
     <div class="nav-links">
       <a href="phd-advisory.html" data-zh="博士服務" data-en="PhD Advisory">博士服務</a>
       <a href="masters-advisory.html" data-zh="碩士服務" data-en="Master's Advisory">碩士服務</a>
@@ -54,7 +57,8 @@
     <div class="label">Consulting · Education · Technology</div>
     <h1 data-zh="為專業機構提供結構化諮詢與申請支持。"
         data-en="Structured consulting and application support for professional organizations.">
-      為專業機構提供結構化諮詢與申請支持。
+      為專業機構提供結構化諮詢<br>
+      與申請支持。
     </h1>
     <p data-zh="遠嶠科技有限公司結合專業諮詢、內容開發與科技工具，為教育服務機構及專業團隊提供穩定、可擴展且高品質的交付支持。"
        data-en="Promontory Technology Limited combines consulting, content development, and technology-enabled workflows to support education service organizations and professional teams with reliable, scalable delivery.">
