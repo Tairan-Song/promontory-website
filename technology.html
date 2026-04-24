@@ -4,206 +4,186 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Technology | Promontory Technology Limited</title>
-
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, "Noto Sans TC", sans-serif;
-      color: #0A2540;
-      background: #ffffff;
-    }
+    body{margin:0;font-family:Arial,"Noto Sans TC",sans-serif;color:#0A2540;background:#fff}
+    .nav{max-width:1180px;margin:auto;padding:28px 24px;display:flex;justify-content:space-between;align-items:center}
+    .brand{display:flex;align-items:center;gap:16px;font-weight:700;font-size:24px;text-decoration:none;color:inherit}
+    .brand img{width:82px}
+    .brand span{display:block;font-size:11px;letter-spacing:3px;color:#64748b;margin-top:4px}
+    .nav-links{display:flex;gap:22px;align-items:center}
+    .nav-links a{color:#0A2540;text-decoration:none;font-weight:700;font-size:14px}
+    .lang-toggle{border:1px solid #d7e0ea;background:white;color:#0A2540;padding:10px 18px;border-radius:999px;font-weight:700;cursor:pointer}
 
-    .nav {
-      max-width: 1180px;
-      margin: auto;
-      padding: 28px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .hero{max-width:980px;margin:auto;padding:110px 24px;text-align:center}
+    .label{color:#2EC4B6;font-size:13px;letter-spacing:4px;font-weight:700;text-transform:uppercase}
+    h1{font-size:56px;line-height:1.08;margin:18px 0 28px}
+    .hero p{font-size:20px;color:#475569;line-height:1.75;max-width:780px;margin:auto}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-weight: 700;
-      font-size: 22px;
-    }
+    .section{padding:80px 24px}
+    .gray{background:#f6f9fc}
+    .inner{max-width:1050px;margin:auto}
+    h2{font-size:38px;margin:12px 0 28px}
 
-    .brand img {
-      width: 72px;
-    }
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .card{background:white;border:1px solid #e2e8f0;border-radius:20px;padding:30px}
+    .card h3{font-size:22px;margin-top:0}
+    .card p,.item p{color:#475569;line-height:1.7}
 
-    .brand span {
-      display: block;
-      font-size: 11px;
-      letter-spacing: 3px;
-      color: #64748b;
-    }
+    .item{border-left:4px solid #2EC4B6;padding-left:20px;margin-bottom:26px}
 
-    .lang-toggle {
-      border: 1px solid #d7e0ea;
-      background: white;
-      padding: 10px 18px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-weight: 700;
-    }
+    .btn{background:#2EC4B6;color:white;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block}
+    .cta{background:#0A2540;color:white;text-align:center}
+    .cta p{color:#cbd5e1}
+    .cta a{margin-top:18px}
+    .cta-email{margin-top:18px;color:#cbd5e1}
+    .cta-email a{color:white;text-decoration:none}
 
-    .hero {
-      max-width: 900px;
-      margin: auto;
-      padding: 120px 24px;
-      text-align: center;
-    }
+    footer{max-width:1180px;margin:auto;padding:36px 24px;color:#64748b;display:flex;justify-content:space-between;gap:24px;font-size:14px}
+    footer a{color:#64748b;text-decoration:none}
 
-    h1 {
-      font-size: 52px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 20px;
-      color: #475569;
-      line-height: 1.7;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 24px;
-    }
-
-    h2 {
-      font-size: 30px;
-      margin-bottom: 16px;
-    }
-
-    .cta {
-      background: #0A2540;
-      color: white;
-      text-align: center;
-      padding: 80px 24px;
-    }
-
-    .cta p {
-      color: #cbd5e1;
-    }
-
-    .btn {
-      background: #2EC4B6;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #64748b;
+    @media(max-width:800px){
+      .nav{align-items:flex-start;gap:20px}
+      .nav-links{flex-direction:column;align-items:flex-end;gap:10px}
+      .brand{font-size:20px}
+      .brand img{width:64px}
+      .grid{grid-template-columns:1fr}
+      h1{font-size:40px}
+      footer{flex-direction:column}
     }
   </style>
 </head>
 
 <body>
-
   <nav class="nav">
-    <div class="brand">
-      <img src="Logo.png" />
+    <a href="/" class="brand">
+      <img src="Logo.png" alt="Promontory Technology Limited Logo" />
       <div>
         遠嶠科技有限公司
         <span>PROMONTORY TECHNOLOGY LIMITED</span>
       </div>
-    </div>
+    </a>
 
-    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">English</button>
+    <div class="nav-links">
+      <a href="/" data-zh="首頁" data-en="Home">首頁</a>
+      <a href="phd-advisory.html" data-zh="博士服務" data-en="PhD Advisory">博士服務</a>
+      <a href="masters-advisory.html" data-zh="碩士服務" data-en="Master's Advisory">碩士服務</a>
+      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">English</button>
+    </div>
   </nav>
 
   <section class="hero">
-    <h1 data-zh="教育智能與留學服務平台"
-        data-en="Education Intelligence Platform & Advisory Systems">
-        教育智能與留學服務平台
+    <div class="label">Technology Direction</div>
+
+    <h1 data-zh="教育智能平台與留學輔導算法。"
+        data-en="Education intelligence platform and advisory algorithms.">
+      教育智能平台與留學輔導算法。
     </h1>
 
-    <p data-zh="我們致力於構建留學資訊整合平台與決策輔助系統，結合數據、經驗與算法，提升留學服務的標準化與決策效率。"
-       data-en="We are building an integrated education intelligence platform and advisory systems, combining data, experience, and algorithmic support to improve decision-making and scalability in global education services.">
-        我們致力於構建留學資訊整合平台與決策輔助系統，結合數據、經驗與算法，提升留學服務的標準化與決策效率。
+    <p data-zh="遠嶠科技有限公司致力於構建留學資訊整合平台與決策輔助系統，將專業服務經驗、結構化數據與算法工具結合，逐步提升留學服務的標準化、透明度與交付效率。"
+       data-en="Promontory Technology Limited is developing an education intelligence platform and advisory systems that combine service experience, structured data, and algorithmic tools to improve standardization, transparency, and delivery efficiency in global education services.">
+      遠嶠科技有限公司致力於構建留學資訊整合平台與決策輔助系統，將專業服務經驗、結構化數據與算法工具結合，逐步提升留學服務的標準化、透明度與交付效率。
     </p>
+  </section>
+
+  <section class="section gray">
+    <div class="inner">
+      <h2 data-zh="核心方向" data-en="Core Directions">核心方向</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3 data-zh="資訊整合平台" data-en="Information Platform">資訊整合平台</h3>
+          <p data-zh="整合院校、專業、項目要求、申請節點與案例資料，建立面向留學服務場景的結構化資訊基礎。"
+             data-en="Integrating universities, programs, requirements, application timelines, and case data into a structured information foundation for education advisory workflows.">
+            整合院校、專業、項目要求、申請節點與案例資料，建立面向留學服務場景的結構化資訊基礎。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-zh="選校與決策輔助" data-en="Matching & Decision Support">選校與決策輔助</h3>
+          <p data-zh="探索基於學生背景、目標地區、專業方向與風險偏好的選校匹配與策略建議系統。"
+             data-en="Exploring school matching and strategy recommendation systems based on applicant profile, target region, academic direction, and risk preference.">
+            探索基於學生背景、目標地區、專業方向與風險偏好的選校匹配與策略建議系統。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-zh="文書與流程工具" data-en="Document & Workflow Tools">文書與流程工具</h3>
+          <p data-zh="開發面向文書規劃、材料管理與交付節點追蹤的工具，提升機構合作中的效率與一致性。"
+             data-en="Developing tools for document planning, material management, and delivery milestone tracking to improve efficiency and consistency in partner workflows.">
+            開發面向文書規劃、材料管理與交付節點追蹤的工具，提升機構合作中的效率與一致性。
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="section">
-    <h2 data-zh="平台方向"
-        data-en="Platform Direction">
-        平台方向
-    </h2>
+    <div class="inner">
+      <h2 data-zh="技術願景" data-en="Technology Vision">技術願景</h2>
 
-    <p data-zh="整合院校、專業、申請策略與歷史案例數據，構建結構化的留學決策支持系統。"
-       data-en="Integrating university data, program information, application strategies, and historical cases into a structured decision-support system.">
-        整合院校、專業、申請策略與歷史案例數據，構建結構化的留學決策支持系統。
-    </p>
+      <div class="item">
+        <h3 data-zh="1. 將服務經驗數據化" data-en="1. Turning service experience into structured data">1. 將服務經驗數據化</h3>
+        <p data-zh="把長期申請服務中的院校資訊、策略判斷、材料規則與案例經驗沉澱為可查詢、可分析的數據基礎。"
+           data-en="Transforming institutional knowledge, strategy decisions, document requirements, and case experience into queryable and analyzable data assets.">
+          把長期申請服務中的院校資訊、策略判斷、材料規則與案例經驗沉澱為可查詢、可分析的數據基礎。
+        </p>
+      </div>
+
+      <div class="item">
+        <h3 data-zh="2. 將流程能力產品化" data-en="2. Productizing workflow capabilities">2. 將流程能力產品化</h3>
+        <p data-zh="將選校、文書、材料節點與合作交付流程抽象為可複用的系統模組，支持更穩定的規模化服務。"
+           data-en="Abstracting school selection, document planning, material milestones, and partner delivery workflows into reusable system modules for scalable service delivery.">
+          將選校、文書、材料節點與合作交付流程抽象為可複用的系統模組，支持更穩定的規模化服務。
+        </p>
+      </div>
+
+      <div class="item">
+        <h3 data-zh="3. 建立輔助決策算法" data-en="3. Building advisory algorithms">3. 建立輔助決策算法</h3>
+        <p data-zh="逐步探索選校匹配、申請風險評估、文書結構建議與策略生成等輔助算法，服務於專業團隊的決策效率。"
+           data-en="Exploring advisory algorithms for school matching, application risk evaluation, document structure recommendations, and strategy generation for professional service teams.">
+          逐步探索選校匹配、申請風險評估、文書結構建議與策略生成等輔助算法，服務於專業團隊的決策效率。
+        </p>
+      </div>
+    </div>
   </section>
 
-  <section class="section">
-    <h2 data-zh="算法與模型"
-        data-en="Algorithms & Systems">
-        算法與模型
-    </h2>
-
-    <p data-zh="開發面向留學申請場景的輔助算法，包括選校匹配、文書優化建議及策略生成系統。"
-       data-en="Developing advisory algorithms for school matching, document optimization, and strategy generation tailored to education consulting workflows.">
-        開發面向留學申請場景的輔助算法，包括選校匹配、文書優化建議及策略生成系統。
-    </p>
-  </section>
-
-  <section class="section">
-    <h2 data-zh="長期目標"
-        data-en="Long-term Vision">
-        長期目標
-    </h2>
-
-    <p data-zh="將專業服務逐步轉化為可擴展的技術產品，形成平台化與系統化的服務能力。"
-       data-en="Transforming professional services into scalable, system-driven products and platforms over time.">
-        將專業服務逐步轉化為可擴展的技術產品，形成平台化與系統化的服務能力。
-    </p>
-  </section>
-
-  <section class="cta">
-    <h2 data-zh="探索合作或技術方向"
-        data-en="Explore Collaboration or Technology Opportunities">
-        探索合作或技術方向
-    </h2>
-
-    <p data-zh="歡迎與我們交流平台建設與服務整合的可能性。"
-       data-en="We welcome discussions on platform development and service integration.">
-        歡迎與我們交流平台建設與服務整合的可能性。
-    </p>
-
-    <a class="btn" href="mailto:info@yuanqiao.io"
-       data-zh="聯繫我們"
-       data-en="Contact Us">聯繫我們</a>
+  <section class="section cta">
+    <div class="inner">
+      <h2 data-zh="探索平台建設與技術合作？"
+          data-en="Interested in platform development or technology collaboration?">
+        探索平台建設與技術合作？
+      </h2>
+      <p data-zh="歡迎聯繫我們，交流留學服務平台、數據整合與輔助算法方向的合作可能。"
+         data-en="Contact us to discuss opportunities around education service platforms, data integration, and advisory algorithm development.">
+        歡迎聯繫我們，交流留學服務平台、數據整合與輔助算法方向的合作可能。
+      </p>
+      <a class="btn" href="mailto:info@yuanqiao.io"
+         data-zh="聯繫我們" data-en="Contact Us">聯繫我們</a>
+      <div class="cta-email">
+        Email: <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
+      </div>
+    </div>
   </section>
 
   <footer>
-    © 2026 Promontory Technology Limited
+    <div>
+      <strong>遠嶠科技有限公司</strong><br />
+      Promontory Technology Limited<br />
+      <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
+    </div>
+    <div>© 2026 Promontory Technology Limited.</div>
   </footer>
 
   <script>
-    let currentLang = "zh";
-
-    function toggleLang() {
-      currentLang = currentLang === "zh" ? "en" : "zh";
-
-      document.querySelectorAll("[data-zh]").forEach(el => {
-        el.textContent = el.getAttribute(`data-${currentLang}`);
+    let currentLang="zh";
+    function toggleLang(){
+      currentLang=currentLang==="zh"?"en":"zh";
+      document.documentElement.lang=currentLang==="zh"?"zh-Hant":"en";
+      document.querySelectorAll("[data-zh]").forEach(el=>{
+        el.textContent=el.getAttribute(`data-${currentLang}`);
       });
-
-      document.getElementById("langBtn").textContent =
-        currentLang === "zh" ? "English" : "繁體中文";
+      document.getElementById("langBtn").textContent=currentLang==="zh"?"English":"繁體中文";
     }
   </script>
-
 </body>
 </html>
