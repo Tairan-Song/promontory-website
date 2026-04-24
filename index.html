@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Promontory Technology Limited</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans TC", sans-serif;
+      color: #0A2540;
+      background: #ffffff;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .btn {
+      background: #2EC4B6;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      max-width: 1180px;
+      margin: auto;
+      padding: 80px 24px 100px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .label {
+      color: #2EC4B6;
+      font-size: 13px;
+      letter-spacing: 4px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 58px;
+      line-height: 1.08;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #475569;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .logo-card {
+      background: #f6f9fc;
+      border: 1px solid #e2e8f0;
+      border-radius: 28px;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .circle {
+      width: 220px;
+      height: 220px;
+      background: #0A2540;
+      border-radius: 50%;
+      margin: auto;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 54px;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 90px 24px;
+    }
+
+    .gray {
+      background: #f6f9fc;
+    }
+
+    .inner {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin: 12px 0 36px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 32px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-top: 0;
+    }
+
+    .card p, .point p {
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    .points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .point {
+      border-left: 4px solid #2EC4B6;
+      padding-left: 20px;
+    }
+
+    .cta {
+      background: #0A2540;
+      color: white;
+      text-align: center;
+    }
+
+    .cta p {
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+
+    footer {
+      max-width: 1180px;
+      margin: auto;
+      padding: 36px 24px;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .hero, .grid, .points {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .circle {
+        width: 180px;
+        height: 180px;
+        font-size: 42px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="brand">
+      遠嶠科技有限公司
+      <span>PROMONTORY TECHNOLOGY LIMITED</span>
+    </div>
+    <a class="btn" href="mailto:info@promontorytechnology.com">Contact Us</a>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <div class="label">TO B APPLICATION SUPPORT</div>
+      <h1>Reliable application support for study abroad agencies.</h1>
+      <p>
+        We provide professional essay writing, application consulting, and
+        white-label support services for education agencies serving global applicants.
+      </p>
+      <br />
+      <a class="btn" href="mailto:info@promontorytechnology.com">Start Partnership</a>
+    </div>
+
+    <div class="logo-card">
+      <div class="circle">遠嶠</div>
+      <h3>Promontory Technology Limited</h3>
+      <p>Professional · Reliable · Confidential</p>
+    </div>
+  </section>
+
+  <section class="section gray">
+    <div class="inner">
+      <div class="label">SERVICES</div>
+      <h2>Built for agencies that need stable delivery.</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Essay & Document Writing</h3>
+          <p>Personal statements, statements of purpose, essays, CVs, recommendation drafts, and application materials.</p>
+        </div>
+
+        <div class="card">
+          <h3>Application Consulting</h3>
+          <p>School selection, application strategy, profile positioning, and application timeline support.</p>
+        </div>
+
+        <div class="card">
+          <h3>White-label Partnership</h3>
+          <p>Confidential back-end support for agencies, allowing partners to serve clients under their own brand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner points">
+      <div>
+        <div class="label">WHY US</div>
+        <h2>A practical partner for long-term agency growth.</h2>
+      </div>
+
+      <div>
+        <div class="point">
+          <h3>Reliable delivery</h3>
+          <p>Clear workflow, stable turnaround, and consistent writing quality.</p>
+        </div>
+
+        <div class="point">
+          <h3>Global academic perspective</h3>
+          <p>Experience across US, UK, and international graduate application systems.</p>
+        </div>
+
+        <div class="point">
+          <h3>Flexible cooperation</h3>
+          <p>Support for per-order projects, package-based cooperation, and long-term agency partnership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="inner">
+      <h2>Looking for a reliable application support partner?</h2>
+      <p>Contact us to discuss cooperation models, pricing, and service scope.</p>
+      <br />
+      <a class="btn" href="mailto:info@promontorytechnology.com">Contact Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <strong>遠嶠科技有限公司</strong><br />
+      Promontory Technology Limited
+    </div>
+    <div>© 2026 Promontory Technology Limited. All rights reserved.</div>
+  </footer>
+</body>
+</html>
