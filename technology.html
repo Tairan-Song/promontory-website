@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology | Promontory Technology Limited</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans TC", sans-serif;
+      color: #0A2540;
+      background: #ffffff;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .brand img {
+      width: 72px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #64748b;
+    }
+
+    .lang-toggle {
+      border: 1px solid #d7e0ea;
+      background: white;
+      padding: 10px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: auto;
+      padding: 120px 24px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    .cta {
+      background: #0A2540;
+      color: white;
+      text-align: center;
+      padding: 80px 24px;
+    }
+
+    .cta p {
+      color: #cbd5e1;
+    }
+
+    .btn {
+      background: #2EC4B6;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="brand">
+      <img src="Logo.png" />
+      <div>
+        遠嶠科技有限公司
+        <span>PROMONTORY TECHNOLOGY LIMITED</span>
+      </div>
+    </div>
+
+    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">English</button>
+  </nav>
+
+  <section class="hero">
+    <h1 data-zh="教育智能與留學服務平台"
+        data-en="Education Intelligence Platform & Advisory Systems">
+        教育智能與留學服務平台
+    </h1>
+
+    <p data-zh="我們致力於構建留學資訊整合平台與決策輔助系統，結合數據、經驗與算法，提升留學服務的標準化與決策效率。"
+       data-en="We are building an integrated education intelligence platform and advisory systems, combining data, experience, and algorithmic support to improve decision-making and scalability in global education services.">
+        我們致力於構建留學資訊整合平台與決策輔助系統，結合數據、經驗與算法，提升留學服務的標準化與決策效率。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 data-zh="平台方向"
+        data-en="Platform Direction">
+        平台方向
+    </h2>
+
+    <p data-zh="整合院校、專業、申請策略與歷史案例數據，構建結構化的留學決策支持系統。"
+       data-en="Integrating university data, program information, application strategies, and historical cases into a structured decision-support system.">
+        整合院校、專業、申請策略與歷史案例數據，構建結構化的留學決策支持系統。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 data-zh="算法與模型"
+        data-en="Algorithms & Systems">
+        算法與模型
+    </h2>
+
+    <p data-zh="開發面向留學申請場景的輔助算法，包括選校匹配、文書優化建議及策略生成系統。"
+       data-en="Developing advisory algorithms for school matching, document optimization, and strategy generation tailored to education consulting workflows.">
+        開發面向留學申請場景的輔助算法，包括選校匹配、文書優化建議及策略生成系統。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 data-zh="長期目標"
+        data-en="Long-term Vision">
+        長期目標
+    </h2>
+
+    <p data-zh="將專業服務逐步轉化為可擴展的技術產品，形成平台化與系統化的服務能力。"
+       data-en="Transforming professional services into scalable, system-driven products and platforms over time.">
+        將專業服務逐步轉化為可擴展的技術產品，形成平台化與系統化的服務能力。
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2 data-zh="探索合作或技術方向"
+        data-en="Explore Collaboration or Technology Opportunities">
+        探索合作或技術方向
+    </h2>
+
+    <p data-zh="歡迎與我們交流平台建設與服務整合的可能性。"
+       data-en="We welcome discussions on platform development and service integration.">
+        歡迎與我們交流平台建設與服務整合的可能性。
+    </p>
+
+    <a class="btn" href="mailto:info@yuanqiao.io"
+       data-zh="聯繫我們"
+       data-en="Contact Us">聯繫我們</a>
+  </section>
+
+  <footer>
+    © 2026 Promontory Technology Limited
+  </footer>
+
+  <script>
+    let currentLang = "zh";
+
+    function toggleLang() {
+      currentLang = currentLang === "zh" ? "en" : "zh";
+
+      document.querySelectorAll("[data-zh]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+
+      document.getElementById("langBtn").textContent =
+        currentLang === "zh" ? "English" : "繁體中文";
+    }
+  </script>
+
+</body>
+</html>
