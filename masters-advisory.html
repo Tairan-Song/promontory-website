@@ -84,7 +84,28 @@
   <footer><div><strong>遠嶠科技有限公司</strong><br />Promontory Technology Limited<br /><a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a></div><div>© 2026 Promontory Technology Limited.</div></footer>
 
   <script>
-    let currentLang="zh";function toggleLang(){currentLang=currentLang==="zh"?"en":"zh";document.documentElement.lang=currentLang==="zh"?"zh-Hant":"en";document.querySelectorAll("[data-zh]").forEach(el=>{el.textContent=el.getAttribute(`data-${currentLang}`)});document.getElementById("langBtn").textContent=currentLang==="zh"?"English":"繁體中文";}
+    let currentLang = localStorage.getItem("siteLang") || "zh";
+
+    function applyLang() {
+      document.documentElement.lang = currentLang === "zh" ? "zh-Hant" : "en";
+
+      document.querySelectorAll("[data-zh]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+
+      const langBtn = document.getElementById("langBtn");
+      if (langBtn) {
+        langBtn.textContent = currentLang === "zh" ? "English" : "繁體中文";
+      }
+    }
+
+    function toggleLang() {
+      currentLang = currentLang === "zh" ? "en" : "zh";
+      localStorage.setItem("siteLang", currentLang);
+      applyLang();
+    }
+
+    applyLang();
   </script>
 </body>
 </html>
