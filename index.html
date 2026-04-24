@@ -172,10 +172,14 @@
     function applyLang() {
       document.documentElement.lang = currentLang === "zh" ? "zh-Hant" : "en";
 
-      document.querySelectorAll("[data-zh]").forEach(el => {
-        el.textContent = el.getAttribute(`data-${currentLang}`);
+      document.querySelectorAll("[data-zh], [data-zh-html]").forEach(el => {
+        if (el.hasAttribute(`data-${currentLang}-html`)) {
+          el.innerHTML = el.getAttribute(`data-${currentLang}-html`);
+        } else {
+          el.textContent = el.getAttribute(`data-${currentLang}`);
+        }
       });
-
+      
       const langBtn = document.getElementById("langBtn");
       if (langBtn) {
         langBtn.textContent = currentLang === "zh" ? "English" : "繁體中文";
