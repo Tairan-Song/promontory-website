@@ -7,27 +7,23 @@ Website: https://yuanqiao.io
 
 ## Overview
 
-This repository contains the static homepage for Promontory Technology Limited.  
-The website introduces the company’s consulting, content development, and technology-enabled professional service capabilities.
+This repository contains the static website for Promontory Technology Limited.
+
+The website presents the company’s current professional service offerings and future technology direction, including structured consulting, education advisory support, content development, and education technology platform exploration.
 
 ## Company
 
 **遠嶠科技有限公司**  
 **Promontory Technology Limited**
 
-Promontory Technology Limited provides structured consulting, professional content development, and technology-enabled workflow support for organizations seeking reliable, scalable, and high-quality execution.
+Promontory Technology Limited provides structured consulting, professional content development, and technology-enabled workflow support for education service organizations and professional teams.
 
-## Main Sections
-
-- Company introduction
-- Consulting, content, and technology-enabled services
-- Bilingual interface with Traditional Chinese and English
-- Contact information
-- Responsive single-page layout
-
-## Files
+## Website Structure
 
 ```text
-index.html   Main website page
-Logo.png     Company logo
-README.md    Project description
+index.html              Homepage
+phd-advisory.html       PhD advisory service page
+masters-advisory.html   Master's advisory service page
+technology.html         Technology direction page
+Logo.png                Company logo
+README.md               Project documentation
