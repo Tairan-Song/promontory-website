@@ -4,15 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Promontory Technology Limited</title>
+
   <script>
     if (window.location.pathname.endsWith("/index.html")) {
       window.location.replace("/");
     }
   </script>
+
   <style>
-    body{margin:0;font-family:Arial,"Noto Sans TC",sans-serif;color:#0A2540;background:#fff}
+    body{margin:0;font-family:Arial,"Noto Sans TC","Microsoft YaHei",sans-serif;color:#0A2540;background:#fff}
     .nav{max-width:1180px;margin:auto;padding:28px 24px;display:flex;justify-content:space-between;align-items:center}
-    .brand{display:flex;align-items:center;gap:16px;font-weight:700;font-size:24px;text-decoration: none;color: inherit;}
+    .brand{display:flex;align-items:center;gap:16px;font-weight:700;font-size:24px;text-decoration:none;color:inherit}
     .brand img{width:82px}
     .brand span{display:block;font-size:11px;letter-spacing:3px;color:#64748b;margin-top:4px}
     .nav-links{display:flex;gap:22px;align-items:center}
@@ -23,21 +25,39 @@
     h1{font-size:56px;line-height:1.08;margin:18px 0 28px}
     .hero p{font-size:20px;color:#475569;line-height:1.75;max-width:760px;margin:0 auto}
     .btn{background:#2EC4B6;color:white;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block}
-    .btn-dark{background:#0A2540}.btn-outline{background:white;color:#0A2540;border:1px solid #0A2540;margin-left:12px}
+    .btn-dark{background:#0A2540}
+    .btn-outline{background:white;color:#0A2540;border:1px solid #0A2540;margin-left:12px}
     .hero-actions{margin-top:38px}
-    .section{padding:90px 24px}.gray{background:#f6f9fc}.inner{max-width:1180px;margin:auto}.center{text-align:center}
+    .section{padding:90px 24px}
+    .gray{background:#f6f9fc}
+    .inner{max-width:1180px;margin:auto}
+    .center{text-align:center}
     h2{font-size:40px;margin:12px 0 36px}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .card{background:white;border:1px solid #e2e8f0;border-radius:20px;padding:32px}
-    .card h3{font-size:22px;margin-top:0}.card p,.point p{color:#475569;line-height:1.7}
+    .card h3{font-size:22px;margin-top:0}
+    .card p,.point p{color:#475569;line-height:1.7}
     .card a{color:#0A2540;font-weight:700;text-decoration:none}
     .points{display:grid;grid-template-columns:1fr 1fr;gap:32px}
     .point{border-left:4px solid #2EC4B6;padding-left:20px;margin-bottom:28px}
-    .cta{background:#0A2540;color:white;text-align:center}.cta p{color:#cbd5e1;font-size:18px;line-height:1.7}
-    .cta-email{margin-top:18px;color:#cbd5e1}.cta-email a{color:white;text-decoration:none;font-weight:700}
+    .cta{background:#0A2540;color:white;text-align:center}
+    .cta p{color:#cbd5e1;font-size:18px;line-height:1.7}
+    .cta-email{margin-top:18px;color:#cbd5e1}
+    .cta-email a{color:white;text-decoration:none;font-weight:700}
     footer{max-width:1180px;margin:auto;padding:36px 24px;color:#64748b;display:flex;justify-content:space-between;gap:24px;font-size:14px}
     footer a{color:#64748b;text-decoration:none}
-    @media(max-width:800px){.nav{align-items:flex-start;gap:20px}.nav-links{flex-direction:column;align-items:flex-end;gap:10px}.brand{font-size:20px}.brand img{width:64px}.grid,.points{grid-template-columns:1fr}h1{font-size:40px}.hero{padding:80px 24px 90px}.btn-outline{margin-left:0;margin-top:12px}footer{flex-direction:column}}
+
+    @media(max-width:800px){
+      .nav{align-items:flex-start;gap:20px}
+      .nav-links{flex-direction:column;align-items:flex-end;gap:10px}
+      .brand{font-size:20px}
+      .brand img{width:64px}
+      .grid,.points{grid-template-columns:1fr}
+      h1{font-size:40px}
+      .hero{padding:80px 24px 90px}
+      .btn-outline{margin-left:0;margin-top:12px}
+      footer{flex-direction:column}
+    }
   </style>
 </head>
 
@@ -50,69 +70,82 @@
         <span>PROMONTORY TECHNOLOGY LIMITED</span>
       </div>
     </a>
+
     <div class="nav-links">
-      <a href="phd-advisory.html" data-zh="博士服務" data-en="PhD Advisory">博士服務</a>
-      <a href="masters-advisory.html" data-zh="碩士服務" data-en="Master's Advisory">碩士服務</a>
-      <a href="technology.html" data-zh="科技方向" data-en="Technology">科技方向</a>
-      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">English</button>
+      <a href="phd-advisory.html" data-zh="博士服務" data-cn="博士服务" data-en="PhD Advisory">博士服務</a>
+      <a href="masters-advisory.html" data-zh="碩士服務" data-cn="硕士服务" data-en="Master's Advisory">碩士服務</a>
+      <a href="technology.html" data-zh="科技方向" data-cn="科技方向" data-en="Technology">科技方向</a>
+      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">简体中文</button>
     </div>
   </nav>
 
   <section class="hero">
     <div class="label">Consulting · Education · Technology</div>
-    <h1 
+
+    <h1
       data-zh-html="為專業機構提供結構化<br>諮詢與申請支持。"
+      data-cn-html="为专业机构提供结构化<br>咨询与申请支持。"
       data-en-html="Structured consulting and application support<br>for professional organizations.">
-    
-      為專業機構提供結構化
-      <br>諮詢與申請支持。
-    
+      為專業機構提供結構化<br>諮詢與申請支持。
     </h1>
-    <p data-zh="遠嶠科技有限公司結合專業諮詢、內容開發與科技工具，為教育服務機構及專業團隊提供穩定、可擴展且高品質的交付支持。"
-       data-en="Promontory Technology Limited combines consulting, content development, and technology-enabled workflows to support education service organizations and professional teams with reliable, scalable delivery.">
+
+    <p
+      data-zh="遠嶠科技有限公司結合專業諮詢、內容開發與科技工具，為教育服務機構及專業團隊提供穩定、可擴展且高品質的交付支持。"
+      data-cn="远峤科技有限公司结合专业咨询、内容开发与科技工具，为教育服务机构及专业团队提供稳定、可扩展且高品质的交付支持。"
+      data-en="Promontory Technology Limited combines consulting, content development, and technology-enabled workflows to support education service organizations and professional teams with reliable, scalable delivery.">
       遠嶠科技有限公司結合專業諮詢、內容開發與科技工具，為教育服務機構及專業團隊提供穩定、可擴展且高品質的交付支持。
     </p>
+
     <div class="hero-actions">
-      <a class="btn btn-dark" href="#services" data-zh="了解服務" data-en="View Services">了解服務</a>
-      <a class="btn btn-outline" href="mailto:info@yuanqiao.io" data-zh="聯繫我們" data-en="Contact Us">聯繫我們</a>
+      <a class="btn btn-dark" href="#services" data-zh="了解服務" data-cn="了解服务" data-en="View Services">了解服務</a>
+      <a class="btn btn-outline" href="mailto:info@yuanqiao.io" data-zh="聯繫我們" data-cn="联系我们" data-en="Contact Us">聯繫我們</a>
     </div>
   </section>
 
   <section id="services" class="section gray">
     <div class="inner">
       <div class="center">
-        <div class="label" data-zh="核心服務" data-en="Core Services">核心服務</div>
-        <h2 data-zh="當前業務與未來技術方向並行發展。" data-en="Current service delivery with a clear path toward technology-driven growth.">
+        <div class="label" data-zh="核心服務" data-cn="核心服务" data-en="Core Services">核心服務</div>
+        <h2
+          data-zh="當前業務與未來技術方向並行發展。"
+          data-cn="当前业务与未来技术方向并行发展。"
+          data-en="Current service delivery with a clear path toward technology-driven growth.">
           當前業務與未來技術方向並行發展。
         </h2>
       </div>
 
       <div class="grid">
         <div class="card">
-          <h3 data-zh="博士申請諮詢" data-en="PhD Advisory">博士申請諮詢</h3>
-          <p data-zh="面向合作機構提供美加博士申請支持，包括背景定位、選校策略、研究方向匹配及文書方案。"
-             data-en="Support for partner organizations in US and Canada PhD applications, including profile positioning, school strategy, research fit, and document planning.">
+          <h3 data-zh="博士申請諮詢" data-cn="博士申请咨询" data-en="PhD Advisory">博士申請諮詢</h3>
+          <p
+            data-zh="面向合作機構提供美加博士申請支持，包括背景定位、選校策略、研究方向匹配及文書方案。"
+            data-cn="面向合作机构提供美加博士申请支持，包括背景定位、选校策略、研究方向匹配及文书方案。"
+            data-en="Support for partner organizations in US and Canada PhD applications, including profile positioning, school strategy, research fit, and document planning.">
             面向合作機構提供美加博士申請支持，包括背景定位、選校策略、研究方向匹配及文書方案。
           </p>
-          <a href="phd-advisory.html" data-zh="查看詳情 →" data-en="View Details →">查看詳情 →</a>
+          <a href="phd-advisory.html" data-zh="查看詳情 →" data-cn="查看详情 →" data-en="View Details →">查看詳情 →</a>
         </div>
 
         <div class="card">
-          <h3 data-zh="碩士申請支持" data-en="Master's Advisory">碩士申請支持</h3>
-          <p data-zh="主營美國與加拿大方向，提供碩士選校、材料規劃、文書開發及申請節奏支持。"
-             data-en="Master's application support focused on the US and Canada, covering school selection, materials planning, document development, and application timeline support.">
+          <h3 data-zh="碩士申請支持" data-cn="硕士申请支持" data-en="Master's Advisory">碩士申請支持</h3>
+          <p
+            data-zh="主營美國與加拿大方向，提供碩士選校、材料規劃、文書開發及申請節奏支持。"
+            data-cn="主营美国与加拿大方向，提供硕士选校、材料规划、文书开发及申请节奏支持。"
+            data-en="Master's application support focused on the US and Canada, covering school selection, materials planning, document development, and application timeline support.">
             主營美國與加拿大方向，提供碩士選校、材料規劃、文書開發及申請節奏支持。
           </p>
-          <a href="masters-advisory.html" data-zh="查看詳情 →" data-en="View Details →">查看詳情 →</a>
+          <a href="masters-advisory.html" data-zh="查看詳情 →" data-cn="查看详情 →" data-en="View Details →">查看詳情 →</a>
         </div>
 
         <div class="card">
-          <h3 data-zh="科技與平台方向" data-en="Technology Direction">科技與平台方向</h3>
-          <p data-zh="探索留學資訊整合平台與輔導算法系統，逐步將服務經驗轉化為可擴展的技術能力。"
-             data-en="Developing education information platforms and advisory algorithms to transform service experience into scalable technology capabilities.">
+          <h3 data-zh="科技與平台方向" data-cn="科技与平台方向" data-en="Technology Direction">科技與平台方向</h3>
+          <p
+            data-zh="探索留學資訊整合平台與輔導算法系統，逐步將服務經驗轉化為可擴展的技術能力。"
+            data-cn="探索留学信息整合平台与辅导算法系统，逐步将服务经验转化为可扩展的技术能力。"
+            data-en="Developing education information platforms and advisory algorithms to transform service experience into scalable technology capabilities.">
             探索留學資訊整合平台與輔導算法系統，逐步將服務經驗轉化為可擴展的技術能力。
           </p>
-          <a href="technology.html" data-zh="查看詳情 →" data-en="View Details →">查看詳情 →</a>
+          <a href="technology.html" data-zh="查看詳情 →" data-cn="查看详情 →" data-en="View Details →">查看詳情 →</a>
         </div>
       </div>
     </div>
@@ -121,30 +154,42 @@
   <section class="section">
     <div class="inner points">
       <div>
-        <div class="label" data-zh="為何選擇遠嶠" data-en="Why Promontory">為何選擇遠嶠</div>
-        <h2 data-zh="面向長期合作的穩定交付夥伴。" data-en="A stable delivery partner for long-term cooperation.">
+        <div class="label" data-zh="為何選擇遠嶠" data-cn="为何选择远峤" data-en="Why Promontory">為何選擇遠嶠</div>
+        <h2
+          data-zh="面向長期合作的穩定交付夥伴。"
+          data-cn="面向长期合作的稳定交付伙伴。"
+          data-en="A stable delivery partner for long-term cooperation.">
           面向長期合作的穩定交付夥伴。
         </h2>
       </div>
+
       <div>
         <div class="point">
-          <h3 data-zh="結構化流程" data-en="Structured workflow">結構化流程</h3>
-          <p data-zh="以標準流程管理服務交付，降低溝通成本並提升穩定性。"
-             data-en="Standardized workflows reduce communication costs and improve delivery consistency.">
+          <h3 data-zh="結構化流程" data-cn="结构化流程" data-en="Structured workflow">結構化流程</h3>
+          <p
+            data-zh="以標準流程管理服務交付，降低溝通成本並提升穩定性。"
+            data-cn="以标准流程管理服务交付，降低沟通成本并提升稳定性。"
+            data-en="Standardized workflows reduce communication costs and improve delivery consistency.">
             以標準流程管理服務交付，降低溝通成本並提升穩定性。
           </p>
         </div>
+
         <div class="point">
-          <h3 data-zh="專業內容能力" data-en="Professional content capability">專業內容能力</h3>
-          <p data-zh="結合背景分析、策略定位與文書開發，支持高品質申請材料輸出。"
-             data-en="Combining profile analysis, strategic positioning, and document development for high-quality application materials.">
+          <h3 data-zh="專業內容能力" data-cn="专业内容能力" data-en="Professional content capability">專業內容能力</h3>
+          <p
+            data-zh="結合背景分析、策略定位與文書開發，支持高品質申請材料輸出。"
+            data-cn="结合背景分析、策略定位与文书开发，支持高品质申请材料输出。"
+            data-en="Combining profile analysis, strategic positioning, and document development for high-quality application materials.">
             結合背景分析、策略定位與文書開發，支持高品質申請材料輸出。
           </p>
         </div>
+
         <div class="point">
-          <h3 data-zh="科技化延展" data-en="Technology-oriented expansion">科技化延展</h3>
-          <p data-zh="逐步將服務經驗沉澱為平台、數據與算法能力。"
-             data-en="Transforming service experience into platform, data, and algorithmic capabilities over time.">
+          <h3 data-zh="科技化延展" data-cn="科技化延展" data-en="Technology-oriented expansion">科技化延展</h3>
+          <p
+            data-zh="逐步將服務經驗沉澱為平台、數據與算法能力。"
+            data-cn="逐步将服务经验沉淀为平台、数据与算法能力。"
+            data-en="Transforming service experience into platform, data, and algorithmic capabilities over time.">
             逐步將服務經驗沉澱為平台、數據與算法能力。
           </p>
         </div>
@@ -154,39 +199,57 @@
 
   <section class="section cta">
     <div class="inner">
-      <h2 data-zh="尋找可靠的合作夥伴？" data-en="Looking for a reliable partner?">尋找可靠的合作夥伴？</h2>
-      <p data-zh="歡迎聯繫我們，了解合作模式、服務範圍與交付安排。"
-         data-en="Contact us to discuss cooperation models, service scope, and delivery arrangements.">
+      <h2 data-zh="尋找可靠的合作夥伴？" data-cn="寻找可靠的合作伙伴？" data-en="Looking for a reliable partner?">尋找可靠的合作夥伴？</h2>
+      <p
+        data-zh="歡迎聯繫我們，了解合作模式、服務範圍與交付安排。"
+        data-cn="欢迎联系我们，了解合作模式、服务范围与交付安排。"
+        data-en="Contact us to discuss cooperation models, service scope, and delivery arrangements.">
         歡迎聯繫我們，了解合作模式、服務範圍與交付安排。
       </p>
-      <a class="btn" href="mailto:info@yuanqiao.io" data-zh="聯繫我們" data-en="Contact Us">聯繫我們</a>
+      <a class="btn" href="mailto:info@yuanqiao.io" data-zh="聯繫我們" data-cn="联系我们" data-en="Contact Us">聯繫我們</a>
       <div class="cta-email">Email: <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a></div>
     </div>
   </section>
 
   <footer>
-    <div><strong>遠嶠科技有限公司</strong><br />Promontory Technology Limited<br /><a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a></div>
+    <div>
+      <strong data-zh="遠嶠科技有限公司" data-cn="远峤科技有限公司" data-en="Promontory Technology Limited">遠嶠科技有限公司</strong><br />
+      Promontory Technology Limited<br />
+      <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
+    </div>
     <div>© 2026 Promontory Technology Limited. All rights reserved.</div>
   </footer>
 
   <script>
     let currentLang = localStorage.getItem("siteLang") || "zh";
+    const langs = ["zh", "cn", "en"];
 
     function applyLang() {
-      document.documentElement.lang = currentLang === "zh" ? "zh-Hant" : "en";
+      document.documentElement.lang =
+        currentLang === "zh" ? "zh-Hant" :
+        currentLang === "cn" ? "zh-Hans" :
+        "en";
 
-      document.querySelectorAll("[data-zh]").forEach(el => {
-        el.textContent = el.getAttribute(`data-${currentLang}`);
+      document.querySelectorAll("[data-zh], [data-zh-html]").forEach(el => {
+        if (el.hasAttribute(`data-${currentLang}-html`)) {
+          el.innerHTML = el.getAttribute(`data-${currentLang}-html`);
+        } else if (el.hasAttribute(`data-${currentLang}`)) {
+          el.textContent = el.getAttribute(`data-${currentLang}`);
+        }
       });
 
       const langBtn = document.getElementById("langBtn");
       if (langBtn) {
-        langBtn.textContent = currentLang === "zh" ? "English" : "繁體中文";
+        langBtn.textContent =
+          currentLang === "zh" ? "简体中文" :
+          currentLang === "cn" ? "English" :
+          "繁體中文";
       }
     }
 
     function toggleLang() {
-      currentLang = currentLang === "zh" ? "en" : "zh";
+      const index = langs.indexOf(currentLang);
+      currentLang = langs[(index + 1) % langs.length];
       localStorage.setItem("siteLang", currentLang);
       applyLang();
     }
