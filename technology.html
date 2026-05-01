@@ -13,7 +13,12 @@
     .brand span{display:block;font-size:11px;letter-spacing:3px;color:#64748b;margin-top:4px}
     .nav-links{display:flex;gap:22px;align-items:center}
     .nav-links a{color:#0A2540;text-decoration:none;font-weight:700;font-size:14px}
-    .lang-toggle{border:1px solid #d7e0ea;background:white;color:#0A2540;padding:10px 18px;border-radius:999px;font-weight:700;cursor:pointer}
+
+    .lang-switch{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700}
+    .lang-link{border:none;background:none;color:#0A2540;font-weight:700;cursor:pointer;padding:0}
+    .lang-link:hover{text-decoration:underline}
+    .lang-separator{color:#cbd5e1}
+    .lang-link.active-lang{display:none}
 
     .hero{max-width:980px;margin:auto;padding:110px 24px;text-align:center}
     .label{color:#2EC4B6;font-size:13px;letter-spacing:4px;font-weight:700;text-transform:uppercase}
@@ -27,7 +32,6 @@
 
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .card{background:white;border:1px solid #e2e8f0;border-radius:20px;padding:30px}
-    .card h3{font-size:22px;margin-top:0}
     .card p,.item p{color:#475569;line-height:1.7}
 
     .item{border-left:4px solid #2EC4B6;padding-left:20px;margin-bottom:26px}
@@ -35,168 +39,158 @@
     .demo-wrap{text-align:center}
     .demo-desc{max-width:720px;margin:auto;color:#475569;line-height:1.7;font-size:18px}
     .demo-image{margin-top:40px}
-    .demo-image img{width:100%;max-width:980px;border-radius:18px;border:1px solid #e2e8f0;box-shadow:0 14px 36px rgba(10,37,64,0.10)}
+    .demo-image img{width:100%;max-width:980px;border-radius:18px;border:1px solid #e2e8f0}
     .demo-note{margin-top:16px;color:#94a3b8;font-size:14px}
 
-    .btn{background:#2EC4B6;color:white;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block}
+    .btn{background:#2EC4B6;color:white;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700}
     .cta{background:#0A2540;color:white;text-align:center}
     .cta p{color:#cbd5e1}
     .cta-email{margin-top:18px;color:#cbd5e1}
-    .cta-email a{color:white;text-decoration:none}
 
-    footer{max-width:1180px;margin:auto;padding:36px 24px;color:#64748b;display:flex;justify-content:space-between;gap:24px;font-size:14px}
-    footer a{color:#64748b;text-decoration:none}
-
-    @media(max-width:800px){
-      .nav{align-items:flex-start;gap:20px}
-      .nav-links{flex-direction:column;align-items:flex-end;gap:10px}
-      .brand{font-size:20px}
-      .brand img{width:64px}
-      .grid{grid-template-columns:1fr}
-      h1{font-size:40px}
-      footer{flex-direction:column}
-    }
+    footer{max-width:1180px;margin:auto;padding:36px 24px;color:#64748b;display:flex;justify-content:space-between}
   </style>
 </head>
 
 <body>
-  <nav class="nav">
-    <a href="/" class="brand">
-      <img src="Logo.png" alt="Promontory Technology Limited Logo" />
-      <div>
-        遠嶠科技有限公司
-        <span>PROMONTORY TECHNOLOGY LIMITED</span>
-      </div>
-    </a>
 
-    <div class="nav-links">
-      <a href="/" data-zh="首頁" data-cn="首页" data-en="Home">首頁</a>
-      <a href="phd-advisory.html" data-zh="博士服務" data-cn="博士服务" data-en="PhD Advisory">博士服務</a>
-      <a href="masters-advisory.html" data-zh="碩士服務" data-cn="硕士服务" data-en="Master's Advisory">碩士服務</a>
-      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">简体中文</button>
-    </div>
-  </nav>
-
-  <section class="hero">
-    <div class="label">Technology Direction</div>
-
-    <h1
-      data-zh="教育智能平台與留學輔導算法。"
-      data-cn="教育智能平台与留学辅导算法。"
-      data-en="Education intelligence platform and advisory algorithms.">
-      教育智能平台與留學輔導算法。
-    </h1>
-
-    <p
-      data-zh="遠嶠科技有限公司致力於構建留學資訊整合平台與決策輔助系統，將專業服務經驗、結構化數據與算法工具結合，逐步提升留學服務的標準化、透明度與交付效率。"
-      data-cn="远峤科技有限公司致力于构建留学信息整合平台与决策辅助系统，将专业服务经验、结构化数据与算法工具结合，逐步提升留学服务的标准化、透明度与交付效率。"
-      data-en="Promontory Technology Limited is developing an education intelligence platform and advisory systems that combine service experience, structured data, and algorithmic tools to improve standardization, transparency, and delivery efficiency.">
-      遠嶠科技有限公司致力於構建留學資訊整合平台與決策輔助系統...
-    </p>
-  </section>
-
-  <section class="section gray">
-    <div class="inner">
-      <h2 data-zh="核心方向" data-cn="核心方向" data-en="Core Directions">核心方向</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3 data-zh="資訊整合平台" data-cn="信息整合平台" data-en="Information Platform">資訊整合平台</h3>
-          <p data-zh="整合院校..." data-cn="整合院校..." data-en="Integrating universities and programs.">整合院校...</p>
-        </div>
-
-        <div class="card">
-          <h3 data-zh="選校與決策輔助" data-cn="选校与决策辅助" data-en="Decision Support">選校與決策輔助</h3>
-          <p data-zh="探索匹配系统..." data-cn="探索匹配系统..." data-en="Exploring matching systems.">探索匹配系统...</p>
-        </div>
-
-        <div class="card">
-          <h3 data-zh="文書與流程工具" data-cn="文书与流程工具" data-en="Workflow Tools">文書與流程工具</h3>
-          <p data-zh="开发流程工具..." data-cn="开发流程工具..." data-en="Developing workflow tools.">开发流程工具...</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section gray">
-    <div class="inner demo-wrap">
-      <h2 data-zh="系統示意" data-cn="系统示意" data-en="System Demo">系統示意</h2>
-
-      <p class="demo-desc"
-         data-zh="以下為內部開發中的系統示意。"
-         data-cn="以下为内部开发中的系统示意。"
-         data-en="Internal system preview.">
-        以下為內部開發中的系統示意。
-      </p>
-
-      <div class="demo-image">
-        <img src="demo1.png" alt="System Demo" />
-      </div>
-
-      <p class="demo-note">Internal preview</p>
-    </div>
-  </section>
-
-  <section class="section cta">
-    <div class="inner">
-      <h2 data-zh="探索技術合作？" data-cn="探索技术合作？" data-en="Interested in collaboration?">
-        探索技術合作？
-      </h2>
-
-      <p data-zh="歡迎聯繫我們。" data-cn="欢迎联系我们。" data-en="Contact us to collaborate.">
-        歡迎聯繫我們。
-      </p>
-
-      <a class="btn" href="mailto:info@yuanqiao.io"
-         data-zh="聯繫我們"
-         data-cn="联系我们"
-         data-en="Contact Us">
-        聯繫我們
-      </a>
-
-      <div class="cta-email">
-        Email: <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
+<nav class="nav">
+  <a href="/" class="brand">
+    <img src="Logo.png" />
     <div>
-      <strong data-zh="遠嶠科技有限公司" data-cn="远峤科技有限公司" data-en="Promontory Technology Limited">遠嶠科技有限公司</strong><br />
-      Promontory Technology Limited<br />
-      <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
+      遠嶠科技有限公司
+      <span>PROMONTORY TECHNOLOGY LIMITED</span>
     </div>
-    <div>© 2026 Promontory Technology Limited.</div>
-  </footer>
+  </a>
 
-  <script>
-    let currentLang = localStorage.getItem("siteLang") || "zh";
-    const langs = ["zh", "cn", "en"];
+  <div class="nav-links">
+    <a href="/" data-zh="首頁" data-cn="首页" data-en="Home">首頁</a>
+    <a href="phd-advisory.html" data-zh="博士服務" data-cn="博士服务" data-en="PhD Advisory">博士服務</a>
+    <a href="masters-advisory.html" data-zh="碩士服務" data-cn="硕士服务" data-en="Master's Advisory">碩士服務</a>
 
-    function applyLang() {
-      document.documentElement.lang =
-        currentLang === "zh" ? "zh-Hant" :
-        currentLang === "cn" ? "zh-Hans" :
-        "en";
+    <div class="lang-switch">
+      <button class="lang-link" data-lang-option="zh" onclick="setLang('zh')">繁體中文</button>
+      <span class="lang-separator">|</span>
+      <button class="lang-link" data-lang-option="cn" onclick="setLang('cn')">简体中文</button>
+      <span class="lang-separator">|</span>
+      <button class="lang-link" data-lang-option="en" onclick="setLang('en')">English</button>
+    </div>
+  </div>
+</nav>
 
-      document.querySelectorAll("[data-zh]").forEach(el => {
-        el.textContent = el.getAttribute(`data-${currentLang}`);
-      });
+<section class="hero">
+  <div class="label">Technology</div>
 
-      document.getElementById("langBtn").textContent =
-        currentLang === "zh" ? "简体中文" :
-        currentLang === "cn" ? "English" :
-        "繁體中文";
-    }
+  <h1
+    data-zh="教育智能平台與留學輔導算法。"
+    data-cn="教育智能平台与留学辅导算法。"
+    data-en="Education intelligence platform and advisory algorithms.">
+    教育智能平台與留學輔導算法。
+  </h1>
 
-    function toggleLang() {
-      const index = langs.indexOf(currentLang);
-      currentLang = langs[(index + 1) % langs.length];
-      localStorage.setItem("siteLang", currentLang);
-      applyLang();
-    }
+  <p
+    data-zh="致力於構建留學資訊整合平台與決策系統。"
+    data-cn="致力于构建留学信息整合平台与决策系统。"
+    data-en="Building structured education decision systems.">
+    致力於構建留學資訊整合平台與決策系統。
+  </p>
+</section>
 
-    applyLang();
-  </script>
+<section class="section gray">
+  <div class="inner">
+    <h2 data-zh="核心方向" data-cn="核心方向" data-en="Core Directions">核心方向</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3 data-zh="資訊整合平台" data-cn="信息整合平台" data-en="Information Platform">資訊整合平台</h3>
+        <p data-zh="整合院校數據" data-cn="整合院校数据" data-en="University data integration">整合院校數據</p>
+      </div>
+
+      <div class="card">
+        <h3 data-zh="決策輔助" data-cn="决策辅助" data-en="Decision Support">決策輔助</h3>
+        <p data-zh="選校算法" data-cn="选校算法" data-en="Matching algorithms">選校算法</p>
+      </div>
+
+      <div class="card">
+        <h3 data-zh="流程工具" data-cn="流程工具" data-en="Workflow Tools">流程工具</h3>
+        <p data-zh="交付系統" data-cn="交付系统" data-en="Delivery systems">交付系統</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section gray">
+  <div class="inner demo-wrap">
+    <h2 data-zh="系統示意" data-cn="系统示意" data-en="System Demo">系統示意</h2>
+
+    <p class="demo-desc"
+       data-zh="內部開發系統示意"
+       data-cn="内部开发系统示意"
+       data-en="Internal system preview">
+      內部開發系統示意
+    </p>
+
+    <div class="demo-image">
+      <img src="demo1.png" />
+    </div>
+
+    <p class="demo-note">Internal preview</p>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="inner">
+    <h2 data-zh="探索合作？" data-cn="探索合作？" data-en="Interested in collaboration?">
+      探索合作？
+    </h2>
+
+    <p data-zh="歡迎聯繫我們" data-cn="欢迎联系我们" data-en="Contact us">
+      歡迎聯繫我們
+    </p>
+
+    <a class="btn" href="mailto:info@yuanqiao.io"
+       data-zh="聯繫我們"
+       data-cn="联系我们"
+       data-en="Contact Us">
+      聯繫我們
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <strong data-zh="遠嶠科技有限公司" data-cn="远峤科技有限公司" data-en="Promontory Technology Limited">
+      遠嶠科技有限公司
+    </strong>
+  </div>
+  <div>© 2026 Promontory Technology Limited.</div>
+</footer>
+
+<script>
+let currentLang = localStorage.getItem("siteLang") || "zh";
+
+function applyLang() {
+  document.documentElement.lang =
+    currentLang === "zh" ? "zh-Hant" :
+    currentLang === "cn" ? "zh-Hans" :
+    "en";
+
+  document.querySelectorAll("[data-zh]").forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
+
+  document.querySelectorAll(".lang-link").forEach(btn => {
+    btn.classList.toggle("active-lang", btn.dataset.langOption === currentLang);
+  });
+}
+
+function setLang(lang){
+  currentLang = lang;
+  localStorage.setItem("siteLang", lang);
+  applyLang();
+}
+
+applyLang();
+</script>
+
 </body>
 </html>
