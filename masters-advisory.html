@@ -4,27 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Master's Advisory | Promontory Technology Limited</title>
+
   <style>
-    body{margin:0;font-family:Arial,"Noto Sans TC",sans-serif;color:#0A2540;background:#fff}
+    body{margin:0;font-family:Arial,"Noto Sans TC","Microsoft YaHei",sans-serif;color:#0A2540;background:#fff}
     .nav{max-width:1180px;margin:auto;padding:28px 24px;display:flex;justify-content:space-between;align-items:center}
     .brand{display:flex;align-items:center;gap:16px;font-weight:700;font-size:24px;text-decoration:none;color:inherit}
-    .brand img{width:82px}.brand span{display:block;font-size:11px;letter-spacing:3px;color:#64748b;margin-top:4px}
-    .nav-links{display:flex;gap:22px;align-items:center}.nav-links a{color:#0A2540;text-decoration:none;font-weight:700;font-size:14px}
+    .brand img{width:82px}
+    .brand span{display:block;font-size:11px;letter-spacing:3px;color:#64748b;margin-top:4px}
+    .nav-links{display:flex;gap:22px;align-items:center}
+    .nav-links a{color:#0A2540;text-decoration:none;font-weight:700;font-size:14px}
     .lang-toggle{border:1px solid #d7e0ea;background:white;color:#0A2540;padding:10px 18px;border-radius:999px;font-weight:700;cursor:pointer}
+
     .hero{max-width:980px;margin:auto;padding:110px 24px;text-align:center}
-    .label{color:#2EC4B6;font-size:13px;letter-spacing:4px;font-weight:700;text-transform:uppercase}h1{font-size:56px;line-height:1.08;margin:18px 0 28px}
-    .hero p{font-size:20px;color:#475569;line-height:1.75;max-width:780px;margin:auto}.section{padding:80px 24px}.gray{background:#f6f9fc}
-    .inner{max-width:1050px;margin:auto}h2{font-size:38px;margin:12px 0 28px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    .card{background:white;border:1px solid #e2e8f0;border-radius:20px;padding:30px}.card p,.item p{color:#475569;line-height:1.7}
-    .item{border-left:4px solid #2EC4B6;padding-left:20px;margin-bottom:26px}.btn{background:#2EC4B6;color:white;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block}
-    .cta{background:#0A2540;color:white;text-align:center}.cta p{color:#cbd5e1}.cta a{margin-top:18px}
+    .label{color:#2EC4B6;font-size:13px;letter-spacing:4px;font-weight:700;text-transform:uppercase}
+    h1{font-size:56px;line-height:1.08;margin:18px 0 28px}
+    .hero p{font-size:20px;color:#475569;line-height:1.75;max-width:780px;margin:auto}
+
+    .section{padding:80px 24px}
+    .gray{background:#f6f9fc}
+    .inner{max-width:1050px;margin:auto}
+    h2{font-size:38px;margin:12px 0 28px}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .card{background:white;border:1px solid #e2e8f0;border-radius:20px;padding:30px}
+    .card p,.item p{color:#475569;line-height:1.7}
+
+    .item{border-left:4px solid #2EC4B6;padding-left:20px;margin-bottom:26px}
+
+    .btn{background:#2EC4B6;color:white;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block}
+    .cta{background:#0A2540;color:white;text-align:center}
+    .cta p{color:#cbd5e1}
     .cta-email{margin-top:18px;color:#cbd5e1}
     .cta-email a{color:white;text-decoration:none}
+
     footer{max-width:1180px;margin:auto;padding:36px 24px;color:#64748b;display:flex;justify-content:space-between;gap:24px;font-size:14px}
-    footer a{color:#64748b;text-decoration:none}@media(max-width:800px){.nav{align-items:flex-start;gap:20px}.nav-links{flex-direction:column;align-items:flex-end;gap:10px}
-                                                                        .brand{font-size:20px}.brand img{width:64px}.grid{grid-template-columns:1fr}h1{font-size:40px}footer{flex-direction:column}}
+    footer a{color:#64748b;text-decoration:none}
+
+    @media(max-width:800px){
+      .nav{align-items:flex-start;gap:20px}
+      .nav-links{flex-direction:column;align-items:flex-end;gap:10px}
+      .brand{font-size:20px}
+      .brand img{width:64px}
+      .grid{grid-template-columns:1fr}
+      h1{font-size:40px}
+      footer{flex-direction:column}
+    }
   </style>
 </head>
+
 <body>
   <nav class="nav">
     <a href="/" class="brand">
@@ -34,73 +61,118 @@
         <span>PROMONTORY TECHNOLOGY LIMITED</span>
       </div>
     </a>
+
     <div class="nav-links">
-      <a href="index.html" data-zh="首頁" data-en="Home">首頁</a>
-      <a href="phd-advisory.html" data-zh="博士服務" data-en="PhD Advisory">博士服務</a>
-      <a href="technology.html" data-zh="科技方向" data-en="Technology">科技方向</a>
-      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">English</button>
+      <a href="/" data-zh="首頁" data-cn="首页" data-en="Home">首頁</a>
+      <a href="phd-advisory.html" data-zh="博士服務" data-cn="博士服务" data-en="PhD Advisory">博士服務</a>
+      <a href="technology.html" data-zh="科技方向" data-cn="科技方向" data-en="Technology">科技方向</a>
+      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">简体中文</button>
     </div>
   </nav>
 
   <section class="hero">
     <div class="label">Master's Advisory</div>
-    <h1 data-zh="海外碩士申請支持服務。" data-en="Global Master's Application Support.">
+
+    <h1
+      data-zh="海外碩士申請支持服務。"
+      data-cn="海外硕士申请支持服务。"
+      data-en="Global Master's Application Support.">
       海外碩士申請支持服務。
     </h1>
-    <p data-zh="我們為合作機構提供碩士申請的一攬子支持，重點覆蓋美國與加拿大，同時延伸至英國、香港、澳洲及其他主要留學地區，包括選校定位、材料規劃、文書開發與申請節奏管理。"
-     data-en="We provide partner organizations with comprehensive master's application support, focusing on the United States and Canada while extending to the United Kingdom, Hong Kong, Australia, and other major study destinations. Services include school selection, materials planning, document development, and application timeline management.">
-    我們為合作機構提供碩士申請的一攬子支持，重點覆蓋美國與加拿大，同時延伸至英國、香港、澳洲及其他主要留學地區，包括選校定位、材料規劃、文書開發與申請節奏管理。</p>
+
+    <p
+      data-zh="我們為合作機構提供碩士申請的一攬子支持，重點覆蓋美國與加拿大，同時延伸至英國、香港、澳洲及其他主要留學地區，包括選校定位、材料規劃、文書開發與申請節奏管理。"
+      data-cn="我们为合作机构提供硕士申请的一揽子支持，重点覆盖美国与加拿大，同时延伸至英国、香港、澳洲及其他主要留学地区，包括选校定位、材料规划、文书开发与申请节奏管理。"
+      data-en="We provide partner organizations with comprehensive master's application support, focusing on the United States and Canada while extending to the United Kingdom, Hong Kong, Australia, and other major study destinations.">
+      我們為合作機構提供碩士申請的一攬子支持...
+    </p>
   </section>
 
   <section class="section gray">
     <div class="inner">
-      <h2 data-zh="服務內容" data-en="Service Scope">服務內容</h2>
-      <div class="grid">
-        <div class="card"><h3 data-zh="選校定位" data-en="School Selection">選校定位</h3><p data-zh="根據學生背景、目標地區、專業方向與風險偏好制定申請清單。" data-en="Building application lists based on student background, target region, academic direction, and risk preference.">根據學生背景、目標地區、專業方向與風險偏好制定申請清單。</p></div>
-        <div class="card"><h3 data-zh="材料規劃" data-en="Materials Planning">材料規劃</h3><p data-zh="梳理申請材料、時間節點與文書需求，提升整體申請效率。" data-en="Organizing application materials, deadlines, and document requirements to improve application efficiency.">梳理申請材料、時間節點與文書需求，提升整體申請效率。</p></div>
-        <div class="card"><h3 data-zh="文書開發" data-en="Document Development">文書開發</h3><p data-zh="支持 PS、SOP、CV、推薦信草稿及補充 Essay 等材料開發。" data-en="Supporting PS, SOP, CV, recommendation letter drafts, supplemental essays, and related materials.">支持 PS、SOP、CV、推薦信草稿及補充 Essay 等材料開發。</p></div>
-      </div>
-    </div>
-  </section>
+      <h2 data-zh="服務內容" data-cn="服务内容" data-en="Service Scope">服務內容</h2>
 
-  <section class="section">
-    <div class="inner">
-      <h2 data-zh="適用合作場景" data-en="Use Cases">適用合作場景</h2>
-      <div class="item"><h3 data-zh="機構批量交付" data-en="Agency-scale delivery">機構批量交付</h3><p data-zh="支持合作機構在申請季穩定處理多個學生案例。" data-en="Supporting partner agencies in handling multiple student cases during application seasons.">支持合作機構在申請季穩定處理多個學生案例。</p></div>
-      <div class="item"><h3 data-zh="高端個案支持" data-en="High-touch case support">高端個案支持</h3><p data-zh="針對背景複雜或目標較高的申請者提供更細緻的策略與文書支持。" data-en="Providing more detailed strategy and document support for complex or ambitious applicant profiles.">針對背景複雜或目標較高的申請者提供更細緻的策略與文書支持。</p></div>
-      <div class="item"><h3 data-zh="白標合作" data-en="White-label cooperation">白標合作</h3><p data-zh="作為後端服務支持合作機構，以穩定交付提升客戶服務能力。" data-en="Providing back-end support for partner organizations to strengthen service delivery under their own brand.">作為後端服務支持合作機構，以穩定交付提升客戶服務能力。</p></div>
+      <div class="grid">
+        <div class="card">
+          <h3 data-zh="選校定位" data-cn="选校定位" data-en="School Selection">選校定位</h3>
+          <p data-zh="根據學生背景..." data-cn="根据学生背景..." data-en="Building application lists based on student background.">
+            根據學生背景...
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-zh="材料規劃" data-cn="材料规划" data-en="Materials Planning">材料規劃</h3>
+          <p data-zh="梳理申請材料..." data-cn="梳理申请材料..." data-en="Organizing application materials.">
+            梳理申請材料...
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-zh="文書開發" data-cn="文书开发" data-en="Document Development">文書開發</h3>
+          <p data-zh="支持PS..." data-cn="支持PS..." data-en="Supporting SOP, CV, etc.">
+            支持PS...
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section cta">
     <div class="inner">
-      <h2 data-zh="需要碩士申請支持？" data-en="Need master's application support?">需要碩士申請支持？</h2>
-      <p data-zh="歡迎聯繫我們了解合作模式與服務範圍。" data-en="Contact us to discuss cooperation models and service scope.">歡迎聯繫我們了解合作模式與服務範圍。</p>
-      <a class="btn" href="mailto:info@yuanqiao.io" data-zh="聯繫我們" data-en="Contact Us">聯繫我們</a>
-      <div class="cta-email">Email: <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a></div>
+      <h2 data-zh="需要碩士申請支持？" data-cn="需要硕士申请支持？" data-en="Need master's application support?">
+        需要碩士申請支持？
+      </h2>
+
+      <p data-zh="歡迎聯繫我們..." data-cn="欢迎联系我们..." data-en="Contact us to discuss cooperation.">
+        歡迎聯繫我們...
+      </p>
+
+      <a class="btn" href="mailto:info@yuanqiao.io"
+         data-zh="聯繫我們"
+         data-cn="联系我们"
+         data-en="Contact Us">
+        聯繫我們
+      </a>
+
+      <div class="cta-email">
+        Email: <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
+      </div>
     </div>
   </section>
 
-  <footer><div><strong>遠嶠科技有限公司</strong><br />Promontory Technology Limited<br /><a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a></div><div>© 2026 Promontory Technology Limited.</div></footer>
+  <footer>
+    <div>
+      <strong data-zh="遠嶠科技有限公司" data-cn="远峤科技有限公司" data-en="Promontory Technology Limited">遠嶠科技有限公司</strong><br />
+      Promontory Technology Limited<br />
+      <a href="mailto:info@yuanqiao.io">info@yuanqiao.io</a>
+    </div>
+    <div>© 2026 Promontory Technology Limited.</div>
+  </footer>
 
   <script>
     let currentLang = localStorage.getItem("siteLang") || "zh";
+    const langs = ["zh", "cn", "en"];
 
     function applyLang() {
-      document.documentElement.lang = currentLang === "zh" ? "zh-Hant" : "en";
+      document.documentElement.lang =
+        currentLang === "zh" ? "zh-Hant" :
+        currentLang === "cn" ? "zh-Hans" :
+        "en";
 
       document.querySelectorAll("[data-zh]").forEach(el => {
         el.textContent = el.getAttribute(`data-${currentLang}`);
       });
 
       const langBtn = document.getElementById("langBtn");
-      if (langBtn) {
-        langBtn.textContent = currentLang === "zh" ? "English" : "繁體中文";
-      }
+      langBtn.textContent =
+        currentLang === "zh" ? "简体中文" :
+        currentLang === "cn" ? "English" :
+        "繁體中文";
     }
 
     function toggleLang() {
-      currentLang = currentLang === "zh" ? "en" : "zh";
+      const index = langs.indexOf(currentLang);
+      currentLang = langs[(index + 1) % langs.length];
       localStorage.setItem("siteLang", currentLang);
       applyLang();
     }
